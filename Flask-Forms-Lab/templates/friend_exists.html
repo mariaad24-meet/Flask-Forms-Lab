@@ -8,9 +8,19 @@
 <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
 </head>
+
 <body>
 
-
+{% if name in facebook_friends %}
+    <h1> yes {{name}} in the list </h1>
+	{% else %}
+	<h1> {{name}}  is not in the list </h1>
+	{% endif %}
+<style>
+	h1{
+		color: white;
+	}
+</style>
 
 </body>
 </html>
